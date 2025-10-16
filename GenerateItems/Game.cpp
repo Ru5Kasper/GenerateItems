@@ -36,13 +36,17 @@ void printRainbowText(const std::string& text, HANDLE hConsole) {
 
 void Game::run() {
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-
+    int turn = -1;
     while (running) {
+        ++turn;
         std::cout << "\n1. Крутить рулетку\n";
         std::cout << "2. Посмотреть статистику\n";
         std::cout << "3. Выйти\n";
         std::cout << "Ваш выбор: ";
 
+        /*int choice = 1;*/
+        /*if (turn > 100)
+            std::cin >> choice;*/
         int choice; std::cin >> choice;
 
         if (choice == 1) {
